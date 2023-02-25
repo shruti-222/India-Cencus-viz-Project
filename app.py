@@ -27,6 +27,6 @@ if plot:
     else:
         #plot for state
         state_df =df[df['State']== selected_state]
-        fig = px.scatter_mapbox(state_df, lat="Latitude", lon="Longitude", size=primary, color=secondary, zoom=5, size_max=35,
+        fig = px.scatter_mapbox(state_df, lat="Latitude", lon="Longitude", size=primary, color=secondary, zoom=6, size_max=35,
                                 mapbox_style="carto-positron", width=1200, height=700,hover_name='District')
         st.plotly_chart(fig, use_container_width=True)
